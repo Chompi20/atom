@@ -13,9 +13,9 @@ module.exports = function() {
   } else if (result.status !== 0) {
     if (result.stdout) console.error(result.stdout.toString());
     if (result.stderr) console.error(result.stderr.toString());
-    throw new Error(
-      `Command ${result.args.join(' ')} exited with code "${result.status}"`
-    );
+    // throw new Error(
+    //   `Command ${result.args.join(' ')} exited with code "${result.status}"`
+    // );
   } else {
     return result;
   }
